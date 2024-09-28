@@ -4,8 +4,7 @@ pipeline {
     environment{
         fichero = fileExists file: "$ruta/miweb" 
         ruta = "/home/jenkins/workspace"
-        repo = "git@github.com:JaimeRax/miweb.git"
-      
+        repo = "https://github.com/JaimeRax/miweb.git"
     }
 
     stages {
