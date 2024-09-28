@@ -22,7 +22,7 @@ services:
     container_name: miweb
 
     ports:
-      - 85:85
+      - 5000:5000
     links:
 
       - db
