@@ -21,7 +21,7 @@ pipeline {
             when{expression {fichero=='true'}}
             steps{
                 echo message: "clonando"
-                dir ("$ruta/miweb){
+                dir ("$ruta/miweb"){
                 sh 'git pull'
                 sh 'ls -la'   
                 }
