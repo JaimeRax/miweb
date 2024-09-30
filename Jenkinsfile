@@ -28,24 +28,27 @@ pipeline {
             }
         }
 
-        stage ("destructiondocker"){
-            steps{
-            echo message: "Deteniendo contenedores"
-            sh 'sudo docker stop mydb admindb web'
-            echo message: "destruyendo contenedores"
-            sh 'sudo docker rm mydb admindb web'
-            }
+        stage ("test"){
+          echo "hola"
         }
-        
-        stage ("dockerdeploy") {
-            steps{
-                echo message: "iniciando deploy de app"
-                dir("$ruta/miweb"){
-                    sh 'ls -la'
-                    sh 'sudo docker-compose up -d'
-                }
-            }
-
-        }     
+        //stage ("destructiondocker"){
+        //    steps{
+        //    echo message: "Deteniendo contenedores"
+        //    sh 'sudo docker stop mydb admindb web'
+        //    echo message: "destruyendo contenedores"
+        //    sh 'sudo docker rm mydb admindb web'
+        //    }
+        //}
+        //
+        //stage ("dockerdeploy") {
+        //    steps{
+        //        echo message: "iniciando deploy de app"
+        //        dir("$ruta/miweb"){
+        //            sh 'ls -la'
+        //            sh 'sudo docker-compose up -d'
+        //        }
+        //    }
+        //
+        //}     
     }
 }
