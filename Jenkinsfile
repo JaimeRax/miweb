@@ -9,24 +9,24 @@ pipeline {
 
     stages {
 
-        stage ("validación false"){
-            when{expression {fichero=='false'}}
-            steps{ 
-                sh 'git clone $repo'
-                sh 'ls -la'
-            }
-        }
-        
-        stage ("validación true"){
-            when{expression {fichero=='true'}}
-            steps{
-                echo message: "clonando"
-                dir ("$ruta/miweb"){
-                sh 'git pull'
-                sh 'ls -la'   
-                }
-            }
-        }
+        //stage ("validación false"){
+        //    when{expression {fichero=='false'}}
+        //    steps{ 
+        //        sh 'git clone $repo'
+        //        sh 'ls -la'
+        //    }
+        //}
+        //
+        //stage ("validación true"){
+        //    when{expression {fichero=='true'}}
+        //    steps{
+        //        echo message: "clonando"
+        //        dir ("$ruta/miweb"){
+        //        sh 'git pull'
+        //        sh 'ls -la'   
+        //        }
+        //    }
+        //}
 
         stage ("test"){
           echo "hola"
