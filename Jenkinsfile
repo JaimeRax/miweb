@@ -31,7 +31,9 @@ pipeline {
         //}
 
         stage ("test"){
-          echo "hola"
+          steps{
+            echo "hola"
+          }
         }
         //stage ("destructiondocker"){
         //    steps{
