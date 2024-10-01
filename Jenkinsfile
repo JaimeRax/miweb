@@ -1,8 +1,6 @@
 pipeline {
-    agent {
-        label 'local'  
-    }
-    
+    agent examen    
+
     environment{
         fichero = fileExists file: "$ruta/miweb" 
         ruta = "/home/jenkins/workspace"
