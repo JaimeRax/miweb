@@ -1,5 +1,7 @@
 pipeline {
-    agent any 
+    agent {
+        label 'local'  
+    }
     
     environment{
         fichero = fileExists file: "$ruta/miweb" 
