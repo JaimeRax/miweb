@@ -7,7 +7,6 @@ pipeline {
     }
 
     stages {
-
         stage ("validación false"){
             when{expression {fichero=='false'}}
             steps{ 
@@ -44,7 +43,6 @@ pipeline {
                     sh 'sudo docker-compose up -d'
                 }
             }
-
         }     
     }
 }
