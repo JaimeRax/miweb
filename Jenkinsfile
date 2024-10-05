@@ -6,6 +6,7 @@ pipeline {
         repo = "https://github.com/JaimeRax/miweb.git"
     }
 
+
     stages {
         stage ("validación false"){
             when{expression {fichero=='false'}}
